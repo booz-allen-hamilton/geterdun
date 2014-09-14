@@ -11,7 +11,6 @@ import org.apache.hadoop.io.Writable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.bah.geterdun.TryHandler.FinalFailureException;
 import com.bah.geterdun.WriteAheadLog.NeedsRotationException;
 
 /**
