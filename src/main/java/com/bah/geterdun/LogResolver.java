@@ -12,7 +12,7 @@ import org.apache.hadoop.io.Writable;
  * 
  * @param <EVENT>
  */
-class LogResolver<EVENT> {
+public class LogResolver<EVENT> {
 
   public static class CorruptLogException extends Exception {
 
