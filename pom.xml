@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.bah</groupId>
   <artifactId>geterdun</artifactId>
-  <version>1.1.0</version>
+  <version>1.1.1</version>
   <name>Get'r Done</name>
   <description>A simple framework for getting idempotent actions done, in a reliable way.</description>
   <url>http://github.com/booz-allen-hamilton/geterdun</url>

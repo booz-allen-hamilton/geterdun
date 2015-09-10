@@ -12,7 +12,7 @@ import org.apache.hadoop.io.Writable;
  * 
  * @param <EVENT>
  */
-class LogResolver<EVENT> {
+public class LogResolver<EVENT> {
 
   public static class CorruptLogException extends Exception {
 
@@ -21,9 +21,9 @@ class LogResolver<EVENT> {
     private long length;
     private String location;
 
-    public CorruptLogException(long position, long length, String location) {
+    CorruptLogException(long position, long length, String location, Exception source) {
       super("Corrupt log " + location + " discovered at " + position + " of "
-          + length);
+          + length, source);
       this.position = position;
       this.length = length;
       this.location = location;
@@ -74,7 +74,7 @@ class LogResolver<EVENT> {
           eventMap.remove(commitId);
         }
       } catch (IOException e) {
-        throw new CorruptLogException(stream.getPos(), streamLength, location);
+        throw new CorruptLogException(stream.getPos(), streamLength, location, e);
       }
     }
   }
